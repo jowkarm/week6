@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to week 6!</title>
+    <title>{{ @title }}</title>
 </head>
 <body>
-<h1>Templating</h1>
+<h1>{{ @title }}</h1>
+<p>My favorite color is {{ @color }}</p>
+<p>My favorite food is {{ @food }}</p>
+<p>Temperature</p>
+<p>Fahrenheit: {{ @temp }} degrees</p>
+<p>Celsius: {{ round((@temp-32) * (5.0/9.0), 2)}}</p>
+
+<p>The circumference of a circle with {{ @radius }} radius is {{ round((2 * pi() * @radius), 3) }}.</p>
+
+<h4>Favorite fruits:</h4>
+<repeat group="{{ @fruits }}" value="{{ @fruit }}">
+    <ul>
+        <li>{{ @fruit }}</li>
+    </ul>
+</repeat>
+
+<h4>Favorite vegetables:</h4>
+<ol>
+<repeat group="{{ @vegetables  }}" value="{{ @vegetable }}">
+
+        <li>{{ @vegetable}}</li>
+
+</repeat>
+</ol>
+
+
+<h4>Cupcakes:</h4>
+
+    <repeat group="{{ @$cupcakes  }}" key="{{ @shortcut}}" value="{{ @label }}">
+        <label><input type="checkbox" value="{{ @shortcut}}" name="cupcake[]">{{ @label }}</label><br>
+
+
+    </repeat>
+
 </body>
 </html>
