@@ -1,0 +1,10 @@
+{
+  "name": "mehdigre/328/week6",
+  "authors": [
+    {"name": "Mehdi Jokar",
+      "email":"jokar.mehdi2@gmail.com"}
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}

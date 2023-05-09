@@ -1,2 +1,2 @@
 # week6
-The repo for week
+The repo for week6 -- templating
